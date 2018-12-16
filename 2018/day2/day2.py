@@ -38,7 +38,7 @@ def part_one(ids):
     return number_of_two_times_occurences * number_of_three_times_occurences
 
 
-def part_two(list_of_ids):
+def part_two(ids):
     '''
     Question:
             What letters are common between the two correct box IDs?
@@ -72,7 +72,7 @@ def part_two(list_of_ids):
             if c1 != c2:
                 return s1[:index] + s1[index + 1:]
 
-    for s1, s2 in itertools.combinations(list_of_ids, 2):
+    for s1, s2 in itertools.combinations(ids, 2):
         are_different = differ_by_one_letter(s1, s2)
         if are_different:
             common_letters = common_letters(s1, s2)
